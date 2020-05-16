@@ -16,4 +16,4 @@ It'd be awesome if you want to contribute to this project! I am a student making
 * contributing to already-open issues by trying to replicate bug reports and participating in discussion
 * improving the codebase and submitting pull requests
 
-This project is governed by the [Contributor Covenant v2.0](https://www.contributor-covenant.org/) and licensed under the [Creative Commons Attribution-ShareAlike 2.0 Generic License](https://creativecommons.org/licenses/by-sa/2.0/). For more details, see `CODE_OF_CONDUCT.md` and `LICENSE`.
+This project is governed by the [Contributor Covenant v2.0](https://www.contributor-covenant.org/) and licensed under the [Creative Commons Attribution-ShareAlike 4.0 Generic License](https://creativecommons.org/licenses/by-sa/4.0/). For more details, see `CODE_OF_CONDUCT.md` and `LICENSE`.
