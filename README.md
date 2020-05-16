@@ -1,6 +1,6 @@
 # scalaria: a free, decentralized poker cardroom
 
-**Scalaria** (Latin for ladder) is an open-source, online, browser-based poker website. Anyone can start a new game and invite their friends to play online with them; scalaria uses a decentralized protocol to connect players directly with no central servers. Choose from five-card draw or Texas hold 'em, set your own house rules, and TKTTKTKTK.
+**Scalaria** (Latin for ladder) is an open-source, online, browser-based poker website. Anyone can start a new game and invite their friends to play online with them; scalaria uses a decentralized protocol to connect players directly with no central servers. Choose from five-card draw or Texas hold 'em, set your own house rules, and play as much as you want.
 
 ![a picture of an adule pterophyllum scalare, a fish with stripes](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Pterophyllum_scalare_adult.jpg/320px-Pterophyllum_scalare_adult.jpg)
 
