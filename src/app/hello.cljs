@@ -2,15 +2,6 @@
   (:require [reagent.core :as r]
             [reagent-forms.core :refer [bind-fields]]))
 
-(defn click-counter [click-count]
-  [:div
-   "The atom " [:code "click-count"] " has value: "
-   @click-count ". "
-   [:input {:type "button" :value "Click me!"
-            :on-click #(swap! click-count inc)}]])
-
-(def click-count (r/atom 0))
-
 (def login-clicked (r/atom false))
 (def host-clicked (r/atom false))
 
@@ -28,20 +19,35 @@
       {:on-click #(reset! host-clicked true)}
       "Host Game"]])
 
-(defn login-form [is-host] 
+(defn row [label input]
   [:div
-    [:h2 (if is-host "Host Game" "Join Game")]
-    [:input {:type "text" :value "Username"
-             :on-change}]
-    [:input {:type "text" :value "Game Name"}]
-    [:input {:type (if is-host "text" "password") :value "Passkey"}]]
-    [:button {:onclick }])
+   [:div [:label label]]
+   [:div input]])
+
+(defn login-form-template []
+  [:div
+    (row "Username"
+      [:input {:field :text :id :name}])
+    (row "Game Name"
+      [:input {:field :text :id :game}])
+    (row "Passkey"
+      [:input {:field (if @host-clicked :text :password) :id :pass}])])
+
+(defn login-form [] 
+  [:div
+    [:h2 (if @host-clicked "Host Game" "Join Game")]
+    [bind-fields (login-form-template) user]
+    [:p (str @user)]
+    [:p (str @host-clicked)]
+    [:button "Start"]])
 
 (defn hello []
   [:<>
    [:h1 "Scalaria"]
    [:p "This is the temporary, ugly UI for testing the backend logic and connectivity."]
-   (cond
-    @host-clicked  [:div "Host A Game"]
-    @login-clicked [:div "Log In"]
-    :else           (login-buttons))])
+    (if 
+      (or @host-clicked @login-clicked) 
+      (login-form) 
+      (login-buttons))])
+
+
